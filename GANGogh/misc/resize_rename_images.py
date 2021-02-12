@@ -14,10 +14,15 @@ from pathlib import Path
 
 import sys
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-import settings
 
-original_images_dir = Path(settings.ORIGINAL_IMAGES_PATH)
-resized_images_dir = Path(settings.RESIZED_IMAGES_PATH)
+# Path to training dataset
+ORIGINAL_IMAGES_PATH = '/Users/Adam/desktop/images'
+# Path to store thumbnails of training dataset
+RESIZED_IMAGES_PATH = '/Users/Adam/desktop/images_resized'
+
+
+original_images_dir = Path(ORIGINAL_IMAGES_PATH)
+resized_images_dir = Path(RESIZED_IMAGES_PATH)
 
 
 def resize_image(base_path, dest_path):
